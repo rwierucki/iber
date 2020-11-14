@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 26px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .header {
+            background-color: #5da2d5;
+            height: 250px;
+        }
+        .flexbox-container {
+            display: flex;
+            flex-direction: row;
+            min-height: calc(100vh - 400px);
+        }
+        .image {
+            width: auto;
+            max-width: 100%;
+        }
+        .aside {
+            background-color: #f3d250;
+            text-align: center;
+            align-content: center;
+            flex: 1;
+            order: 1;
+        }
+        .article {
+            background-color: #90ccf4;
+            flex: 3;
+            order: 2;
+            padding: 10px;
+        }
+        .article p {
+            padding: 8px;
+        }
+        .article p.short {
+            background-color: #eee;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: #ececec;
+            height: 150px;
+        }
+        .div {
+            height: 200px;
+            width: 350px;
+            background-color: red;
+        }
+        span {
+            font-size: 20px;
+        }
+        span.red {
+            color: red;
+            font-weight: bold;
+            background-color: #eee;
+            padding: 5px;
+        }
+        .popup {
+            height: 250px;
+            width: 250px;
+            background-color: #f78888;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid black;
+            box-shadow: 0 0 20px 10px black;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .popup.show {
+            display: flex;
+        }
+        .popup p {
+            font-size: 18px;
+            padding: 10px;
+        }
+        .popup button {
+            font-size: 20px;
+        }
+
+
+        @media (max-width: 1023px) {
+            .div {
+                background-color: green;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .flexbox-container  {
+                flex-direction: column;
+            }
+            .aside {
+                order: 2;
+            }
+            .article {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <header class="header">HEADER - vel adipisci ut</header>
+
+        <div class="flexbox-container">
+            <aside class="aside">ASIDE - Deserunt reprehenderit sed impedit temporibus perspiciatis culpa exercitationem similique nesciunt. Quasi aliquam quas quidem libero eius esse ipsum, reiciendis eaque! Iste, laborum.</aside>
+
+            <article class="article">
+                <h1>Example lorem - example </h1>
+                <img class="image" src="https://picsum.photos/536/354" alt="example">
+                <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. At alias libero minima facilis rerum, debitis maiores qui numquam, est cum quaerat consequuntur porro ratione possimus. Repudiandae, veniam tempora! Sint, doloribus?</p>
+                <p>2 Perferendis magni est molestias alias. Unde vero nemo at dolorum officiis delectus et, eum, cupiditate, voluptates adipisci vel velit eius animi ab dignissimos hic libero aut doloremque. Magnam, consectetur minus?</p>
+                <p>3 Corrupti quo reiciendis excepturi illo est explicabo! Similique eligendi modi eius magnam veniam debitis incidunt ipsa vitae culpa repudiandae aut cumque molestiae dicta autem, velit nam? Nihil id mollitia quam.</p>
+                <p>4 Illo molestiae sapiente numquam vitae, sint fugiat, maxime at natus nemo, rem quibusdam sunt similique vel ducimus labore consequuntur tempora? Est eos odio, voluptatem repellat maiores eius. Placeat, ducimus iusto.</p>
+                <p>5 Pariatur nemo dolor corporis, nulla assumenda ex vitae dolorem hic sapiente nihil minus labore commodi fugit, eveniet numquam excepturi aliquam, iusto culpa magnam? Repudiandae ratione labore laudantium tempora nostrum. Autem.</p>
+                <p>6 Quibusdam vel adipisci ut, laudantium perspiciatis unde id a blanditiis doloribus beatae ipsam error, minima asperiores nemo eaque molestias eligendi voluptates totam illum eius qui nobis! Voluptate pariatur laudantium quam!</p>
+                <p>7 Officiis a beatae expedita voluptate officia ex saepe, deleniti sit, unde sed possimus, labore ea temporibus atque architecto debitis explicabo minima aut id ratione aliquid magni? Corrupti molestiae laborum tempora?</p>
+                <p>8 Pariatur mollitia delectus quia obcaecati! Corrupti minus, mollitia eos repellendus a, quaerat fugit perferendis optio, veritatis facilis blanditiis obcaecati soluta. Vero accusantium, sapiente provident pariatur temporibus dignissimos ducimus magnam sit.</p>
+                <p>9 Dolore praesentium quo quaerat odio delectus necessitatibus omnis suscipit dolores cupiditate eos, quibusdam, laudantium, ducimus laboriosam iure totam fugit ab consequatur sequi natus officia temporibus vero. Consequatur sequi maxime veritatis?</p>
+                <p>10 Iusto debitis, aspernatur earum quo saepe consequuntur iste nihil corporis voluptate aut eligendi! Ipsam blanditiis eius, repudiandae atque veniam hic placeat sint expedita itaque ex voluptates quod amet accusamus quae?</p>
+            </article>
+        </div>
+
+        <footer class="footer">
+            <p>footer - aspernatur earum quo saepe consequuntur iste nihil corporis voluptate aut eligendi! Ipsam blanditiis eius, repudiandae atque veniam hic placeat sint expedita itaque ex v</p>
+        </footer>
+
+        <div class="popup">
+            <p>Example popup -  delectus quia obcaecati</p>
+            <button> zamknij </button>
+        </div>
+
+
+        <script>
+            (function () {
+
+                const arictleElem = document.querySelector(".article");
+                const pElements = arictleElem.querySelectorAll("p");
+                const indexToInsert = [2, 4, 5, 6, 7, 9];
+                const popup = document.querySelector(".popup");
+                const popupButton = document.querySelector(".popup button");
+                const paragrafArray = [];
+                const spanElem = document.createElement("span");
+                const shortParagrafElem = document.createElement("p");
+                let popupActive = false;
+                let popupShown = false;
+                let totalCharCounter = 0;
+                let paragrafLength = Number.POSITIVE_INFINITY;
+                let paragrafContent = '';
+
+
+                /* 5 */
+                const checkScrollStatus = () => {
+                    if (!popupActive && window.scrollY > 1500) {
+                        popupActive = true;
+                        popupShow();
+                    }
+                    else if (window.scrollY <= 1500) {
+                        popupActive = false;
+                    }
+                }
+                const popupShow = () => {
+                    if (!popupShown) {
+                        popup.classList.add("show");
+                        popupShown = true;
+                        console.log("Popup wyświetlony");
+                    }
+                }
+                const popupHide = () => {
+                    popup.classList.remove("show");
+                    popupShown = false;
+                }
+                const trimString = (string) => {
+                    return string.textContent.replace(/\s/g, '');
+                }
+
+
+                /* 6 */
+                const countChar = (item) => {
+                    totalCharCounter += trimString(item).length;
+                }
+                const addToArray = (array, item) => {
+                    array.push(item);
+                }
+
+
+                /* 4, 6, 8 */
+                pElements.forEach((p,index) => {
+                    if (indexToInsert.indexOf(index+1) !== -1) {
+                        const divElem = document.createElement("div");
+                        divElem.classList.add("div");
+                        arictleElem.insertBefore(divElem, p.nextSibling);
+                    }
+                    countChar(p);
+                    addToArray(paragrafArray, p);
+                });
+
+
+                /* 5 */
+                window.addEventListener("scroll", checkScrollStatus);
+                popupButton.addEventListener("click", popupHide);
+
+
+                /* 6, 7 */
+                if (totalCharCounter < 3000) {
+                    spanElem.classList.add("red");
+                }
+                spanElem.textContent = `Liczba znaków: ${totalCharCounter}`;
+                arictleElem.appendChild(spanElem);
+
+
+                /* 8 */
+                paragrafArray.forEach((paragraf) => {
+                    if (paragraf.textContent.length < paragrafLength) {
+                        paragrafLength = paragraf.textContent.length;
+                        paragrafContent = paragraf.textContent;
+                    }
+                });
+                shortParagrafElem.textContent = paragrafContent;
+                shortParagrafElem.classList.add("short");
+                arictleElem.appendChild(shortParagrafElem);
+                })();
+        </script>
+</body>
+</html>
